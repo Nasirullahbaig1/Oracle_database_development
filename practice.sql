@@ -158,8 +158,24 @@ commit;
 alter table teacher
 add salary number;
 
+select * from teacher;
 
+update teacher
+set salary = 40000;
 
+update teacher
+set salary = salary + 3500
+where teacher_id = 3;
+
+merge into new_teacher t
+using teacher s
+on (s.TEACHER_ID=t.TEACHER_ID)
+when not matched then
+insert values (s.TEACHER_ID, s.TEACHER_NAME, s.TEACHER_COURSE)
+when matched then
+update set t.TEACHER_NAME=s.TEACHER_NAME, t.TEACHER_COURSE=s.TEACHER_COURSE;
+
+select * from new_teacher;
 
 
 
