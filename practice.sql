@@ -155,6 +155,11 @@ update set t.teacher_name=s.teacher_name, t.teacher_course=s.teacher_course;
 select * from new_teacher;
 commit;
 
+alter table teacher
+add salary number;
+
+
+
 
 
 
