@@ -129,6 +129,20 @@ create table teacher(
 );
 commit;
 
+select * from teacher;
+
+insert into teacher(TEACHER_ID, TEACHER_NAME, TEACHER_COURSE)
+values(3, 'atta hussain', 1002);
+
+create table new_teacher(
+    teacher_id number,
+    teacher_name varchar2(50),
+    teacher_course number,
+    constraint PK_teacher_id_new primary key (teacher_id),
+    constraint FK_teacher_course_new foreign key (teacher_course) references course(course_id)
+);
+
+commit;
 
 
 
