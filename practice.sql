@@ -144,6 +144,21 @@ create table new_teacher(
 
 commit;
 
+merge into new_teacher t
+using teacher s
+on (s.teacher_id=t.teacher_id)
+when not matched then
+insert values(s.teacher_id, s.teacher_name, s.teacher_course)
+when matched then
+update set t.teacher_name=s.teacher_name, t.teacher_course=s.teacher_course;
+
+select * from new_teacher;
+commit;
+
+
+
+
+
 
 
 
