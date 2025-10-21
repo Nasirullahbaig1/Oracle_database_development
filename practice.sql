@@ -188,6 +188,21 @@ order by course_credit desc;
 select * from course
 order by course_credit desc, course_id desc;
 
+select * from course
+order by course_credit desc
+fetch first row only;
+
+select * from course
+order by course_credit desc
+offset 2 rows
+fetch first row only;
+
+select * from course
+order by course_credit desc
+offset 2 rows
+fetch first row with ties;
+
+
 
 
 
