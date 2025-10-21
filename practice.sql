@@ -177,6 +177,22 @@ update set t.TEACHER_NAME=s.TEACHER_NAME, t.TEACHER_COURSE=s.TEACHER_COURSE;
 
 select * from new_teacher;
 
+select * from course;
+
+select * from course
+order by course_credit;
+
+select * from course
+order by course_credit desc;
+
+select * from course
+order by course_credit desc, course_id desc;
+
+
+
+
+
+
 
 
 
