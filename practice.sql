@@ -202,6 +202,17 @@ order by course_credit desc
 offset 2 rows
 fetch first row with ties;
 
+select * from teacher;
+
+select * from teacher
+order by salary
+fetch first row only;
+
+select * from teacher
+order by salary
+fetch first row with ties;
+
+
 
 
 
