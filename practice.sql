@@ -212,6 +212,8 @@ select * from teacher
 order by salary
 fetch first row with ties;
 
+--joins in oracle sql
+
 
 
 
