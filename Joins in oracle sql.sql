@@ -47,6 +47,36 @@ select e_name, dep_name from employee natural join department;
 commit;
 delete from department where e_no=6;
 
+--Self join
+--Type of join where we join the table with its self
+create table study(
+    s_id varchar2(10),
+    c_id varchar2(10),
+    since date
+);
+insert into study
+values('s1', 'c1', date'2021-02-06');
+insert into study
+values('s2', 'c2', date'2024-04-02');
+insert into study
+values('s1', 'c1', date'2021-02-06');
+
+delete from study where s_id='s1';
+select * from study;
+commit;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
