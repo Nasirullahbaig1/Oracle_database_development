@@ -93,6 +93,36 @@ where t2.emp_id = t1.manager_id;
 
 commit;
 
+--Equi joins
+--there should be equal sign among the attributes 
+--find the emp name who worked in a department having location same as their address.
+create table empl(
+    e_no number,
+    e_name varchar2(20),
+    adress varchar2(50)
+);
+create table dept(
+    dep_no number,
+    location varchar(30),
+    e_no number
+);
+
+insert into empl values(1,'Ram', 'Delhi');
+insert into empl values(2,'Varun', 'Chd');
+insert into empl values(3,'Ravi', 'chd');
+insert into empl values(4,'Amrit', 'Delhi');
+
+insert into dept values(101,'Delhi', 1);
+insert into dept values(102,'Pune', 2);
+insert into dept values(103,'Patna', 4);
+
+select * from empl;
+select * from dept;
+
+--find the emp name who worked in a department having location same as their address.
+select e_name, adress, location from empl, dept where empl.e_no=dept.e_no and  empl.adress = dept.location;
+commit;
+
 
 
 
