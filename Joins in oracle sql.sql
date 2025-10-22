@@ -35,6 +35,22 @@ values(1001, 'computer', 6);
 
 select * from department;
 
+--JOin = cross product + some conditions
+--Natural join
+select e_name from employee  emp, department dep
+where emp.e_no=dep.e_no;
+--This is the logic behind natural join we take the product of two tables and then put some condition there.
+select e_name, dep_name from employee natural join department;
+--This is the actual syntex for natural join 
+commit;
+
+delete from department where e_no=6;
+
+
+
+
+
+
 
 
 
