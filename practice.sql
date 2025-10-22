@@ -213,6 +213,7 @@ order by salary
 fetch first row with ties;
 
 drop table new_teacher;
+commit;
 
 --joins in oracle sql
 
