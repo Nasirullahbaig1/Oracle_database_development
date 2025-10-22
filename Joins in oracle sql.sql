@@ -63,7 +63,54 @@ values('s1', 'c1', date'2021-02-06');
 
 delete from study where s_id='s1';
 select * from study;
+select t1.s_id from study t1, study t2 where t1.s_id=t2.s_id and t1.c_id <> t2.c_id;
 commit;
+--now we will join the study table to its self to know which student is enrolled on two courses.
+--we use alias to make a temparory copy of the study table
+--find the student who is enrolled in at least two courses
+
+--lets create a new table for a batter example
+
+create table emp(
+    emp_id number,
+    empname varchar2(20),
+    manager_id number
+);
+insert into emp(emp_id, empname, manager_id)
+values(1, 'Agni', 3);
+insert into emp(emp_id, empname, manager_id)
+values(2, 'Akash', 4);
+insert into emp(emp_id, empname, manager_id)
+values(3, 'Dharti', 2);
+insert into emp(emp_id, empname, manager_id)
+values(4, 'Vayu', 3);
+
+select * from emp;
+
+--now using this table we have to find the employe and their manager from the same table
+select t1.empname Employee_name, t2.empname Manager_name from emp t1, emp t2
+where t2.emp_id = t1.manager_id;
+
+commit;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
