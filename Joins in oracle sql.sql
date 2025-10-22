@@ -63,7 +63,9 @@ values('s1', 'c1', date'2021-02-06');
 
 delete from study where s_id='s1';
 select * from study;
-select t1.s_id from study t1, study t2 where t1.s_id=t2.s_id and t1.c_id <> t2.c_id;
+select t1.s_id 
+from study t1, study t2 
+where t1.s_id=t2.s_id and t1.c_id <> t2.c_id;
 commit;
 --now we will join the study table to its self to know which student is enrolled on two courses.
 --we use alias to make a temparory copy of the study table
@@ -88,8 +90,14 @@ values(4, 'Vayu', 3);
 select * from emp;
 
 --now using this table we have to find the employe and their manager from the same table
-select t1.empname Employee_name, t2.empname Manager_name from emp t1, emp t2
+select t1.empname Employee_name, t2.empname Manager_name 
+from emp t1, emp t2
 where t2.emp_id = t1.manager_id;
+
+select * 
+from emp t1, emp t2
+where t2.emp_id = t1.manager_id;
+
 
 commit;
 
@@ -122,6 +130,13 @@ select * from dept;
 --find the emp name who worked in a department having location same as their address.
 select e_name, adress, location from empl, dept where empl.e_no=dept.e_no and  empl.adress = dept.location;
 commit;
+
+--left outer join 
+--it returns the matching rows and the rows in the left table but not in the right table
+
+
+
+
 
 
 
