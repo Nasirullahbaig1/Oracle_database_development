@@ -94,7 +94,7 @@ where t2.emp_id = t1.manager_id;
 commit;
 
 --Equi joins
---there should be equal sign among the attributes 
+--there should be equal sign among all the attributes including the common ones 
 --find the emp name who worked in a department having location same as their address.
 create table empl(
     e_no number,
