@@ -134,7 +134,16 @@ commit;
 --left outer join 
 --it returns the matching rows and the rows in the left table but not in the right table
 
+select * from employee;
 
+create table employee2 as  select * from employee where 1=3;
+select * from employee2;
+/
+select * from ALL_USERS;
+/
+ALTER USER HR IDENTIFIED BY HR;
+
+ALTER USER HR ACCOUNT UNLOCK;
 
 
 
