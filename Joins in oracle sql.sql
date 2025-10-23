@@ -62,7 +62,9 @@ insert into study
 values('s1', 'c1', date'2021-02-06');
 
 delete from study where s_id='s1';
+
 select * from study;
+
 select t1.s_id 
 from study t1, study t2 
 where t1.s_id=t2.s_id and t1.c_id <> t2.c_id;
