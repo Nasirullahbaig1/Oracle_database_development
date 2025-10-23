@@ -128,7 +128,9 @@ select * from empl;
 select * from dept;
 
 --find the emp name who worked in a department having location same as their address.
-select e_name, adress, location from empl, dept where empl.e_no=dept.e_no and  empl.adress = dept.location;
+select e_name, adress, location 
+from empl, dept 
+where empl.e_no=dept.e_no and  empl.adress = dept.location;
 commit;
 
 --left outer join 
