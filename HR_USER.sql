@@ -201,6 +201,44 @@ select EMPLOYEE_ID, FIRST_NAME, SALARY, MANAGER_ID from employees
 order by salary desc
 offset 1 rows
 fetch next 2 rows with ties; 
+/
+/
+--crate a new employee table and and mere the data into that
+create table M_employee as select EMPLOYEE_ID, FIRST_NAME, LAST_NAME,EMAIL
+from employees where 1=3;
+/
+select * from M_employee;
+drop table M_employee;
+/
+merge into M_employee t
+using employees s
+on(t.EMPLOYEE_ID = s.EMPLOYEE_ID)
+when matched then
+update set  t.FIRST_NAME=s.FIRST_NAME, 
+            t.LAST_NAME=s.LAST_NAME, 
+            t.EMAIL=s.EMAIL
+when not matched then
+insert (t.EMPLOYEE_ID, t.FIRST_NAME, t.LAST_NAME, t.EMAIL)
+values (s.EMPLOYEE_ID, s.FIRST_NAME, s.LAST_NAME, s.EMAIL);
+/
+select * from M_employee;
+/
+/
+--create a table using joints from two existing table using ctas
+select * from employees;
+select * from departments;
+/
+create table emp_dpt as select emp.EMPLOYEE_ID, emp.FIRST_NAME, emp.EMAIL, dpt.DEPARTMENT_NAME
+from employees emp inner join departments dpt
+on(emp.DEPARTMENT_ID = dpt.DEPARTMENT_ID);
+/
+select * from emp_dpt;
+commit;
+
+
+
+
+
 
 
 
