@@ -75,6 +75,26 @@ commit;
 /
 select * from new_employee_nasir
 where salary = 20000;
+/
+/
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
