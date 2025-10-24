@@ -78,6 +78,99 @@ where salary = 20000;
 /
 /
 /
+select * from employees;
+--create two new tables to perform join practice and see the difference
+create table personal(
+    P_id number constraint PK_ID primary key,
+    name varchar2(20),
+    address varchar(40),
+    contact number    
+);
+create table profrssional(
+    p_work varchar2(20),
+    dept varchar2(20),
+    p_id number,
+    constraint FK_ID_P foreign key (p_id) references personal(P_id)
+);
+
+insert into personal
+values(10, 'ankit', 'kapali', 0343222222);
+insert into personal
+values(20, 'ankush', 'kapali', 0442222222);
+insert into personal
+values(30, 'akash', 'mango', 9993222222);
+insert into personal
+values(40, 'altaf', 'sakchi', 2244222222);
+
+select * from personal;
+
+alter table profrssional
+drop constraint FK_ID_P;
+
+alter table personal
+drop constraint PK_ID;
+
+insert into profrssional
+values('teacher', 'BBA', 20);
+insert into profrssional
+values('doctor', 'MBBS', 40);
+insert into profrssional
+values('teacher', 'MBA', 50);
+insert into profrssional
+values('programmer', 'java', 60);
+insert into profrssional
+values('cashier', 'ACCA', 10);
+
+select * from profrssional;
+
+--Equi join 
+select p.name, p.address, s.p_work 
+from personal p, profrssional s
+where p.P_id=s.p_id;
+
+--non equi join
+select p.name, p.address, s.P_work
+from personal p, profrssional s
+where p.p_id > s.p_id;
+
+--natural join
+select p.name, p.address, s.P_work
+from personal p natural join profrssional s;
+
+--inner join
+select p.name, p.address, s.P_work
+from personal p inner join profrssional s
+on p.p_id = s.p_id;
+
+--cross join
+select p.name, p.address, s.P_work
+from personal p cross join profrssional s;
+
+--left outer join
+select p.name, p.address, s.P_work
+from personal p left outer join profrssional s
+on p.p_id = s.p_id;
+
+--right outer join
+select p.name, p.address, s.P_work
+from personal p right outer join profrssional s
+on p.p_id = s.p_id;
+
+--full outer join
+select p.name, p.address, s.P_work
+from personal p full outer join profrssional s
+on p.p_id = s.p_id;
+
+--self join
+select p1.name, p1.address, p1.contact
+from personal p1, personal p2
+where p1.address = p2.address and p1.P_id != p2.P_id;
+
+select * from personal;
+commit;
+
+
+
 
 
 
