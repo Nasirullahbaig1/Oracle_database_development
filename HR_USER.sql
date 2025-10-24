@@ -53,7 +53,22 @@ on emp.job_id=jb.job_id;
 select emp.employee_id, emp.first_name, emp.last_name, jb.job_title
 from employees emp full join jobs jb
 on emp.job_id=jb.job_id;
+/
+select * from employees;
+select * from employees where department_id is not NULL
+/
+create table new_employee_nasir as select EMPLOYEE_ID, FIRST_NAME, LAST_NAME, HIRE_DATE, SALARY, DEPARTMENT_ID 
+from employees
+where DEPARTMENT_ID is not NULL;
+select * from new_employee_nasir;
 
+update new_employee_nasir
+set salary = 20000
+where salary < 10000;
+commit;
+
+select * from new_employee_nasir
+where salary = 20000
 
 
 
