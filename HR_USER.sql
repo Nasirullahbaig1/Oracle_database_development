@@ -195,6 +195,12 @@ from employees emp right join departments dpt
 on emp.department_id = dpt.department_id and emp.salary > 10000;
 /
 commit;
+/
+--ordering of data
+select EMPLOYEE_ID, FIRST_NAME, SALARY, MANAGER_ID from employees
+order by salary desc
+offset 1 rows
+fetch next 2 rows with ties; 
 
 
 
