@@ -173,8 +173,8 @@ commit;
 --some more practice on joins with where and on clause
 select * from employees;
 select * from departments;
-
---lets apply lef join with some conditions
+/
+--lets apply left join with some conditions
 select emp.first_name, emp.job_id, emp.salary, dpt.department_name
 from employees emp left join departments dpt
 on emp.department_id = dpt.department_id
@@ -183,7 +183,18 @@ where emp.salary > 10000;
 select emp.first_name, emp.job_id, emp.salary, dpt.department_name
 from employees emp left join departments dpt
 on emp.department_id = dpt.department_id and emp.salary > 10000;
-
+/
+--now lets apply right join with the above condition
+select emp.first_name, emp.job_id, emp.salary, dpt.department_name
+from employees emp right join departments dpt
+on emp.department_id = dpt.department_id
+where emp.salary > 10000;
+/
+select emp.first_name, emp.job_id, emp.salary, dpt.department_name
+from employees emp right join departments dpt
+on emp.department_id = dpt.department_id and emp.salary > 10000;
+/
+commit;
 
 
 
