@@ -203,7 +203,7 @@ offset 1 rows
 fetch next 2 rows with ties; 
 /
 /
---crate a new employee table and and mere the data into that
+--crate a new employee table and and merge the data into that
 create table M_employee as select EMPLOYEE_ID, FIRST_NAME, LAST_NAME,EMAIL
 from employees where 1=3;
 /
