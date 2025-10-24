@@ -160,15 +160,29 @@ on p.p_id = s.p_id;
 select p.name, p.address, s.P_work
 from personal p full outer join profrssional s
 on p.p_id = s.p_id;
-
+/
 --self join
 select p1.name, p1.address, p1.contact
 from personal p1, personal p2
 where p1.address = p2.address and p1.P_id != p2.P_id;
-
+/
 select * from personal;
 commit;
+/
+/
+--some more practice on joins with where and on clause
+select * from employees;
+select * from departments;
 
+--lets apply lef join with some conditions
+select emp.first_name, emp.job_id, emp.salary, dpt.department_name
+from employees emp left join departments dpt
+on emp.department_id = dpt.department_id
+where emp.salary > 10000;
+
+select emp.first_name, emp.job_id, emp.salary, dpt.department_name
+from employees emp left join departments dpt
+on emp.department_id = dpt.department_id and emp.salary > 10000;
 
 
 
