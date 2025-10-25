@@ -235,6 +235,13 @@ on(emp.DEPARTMENT_ID = dpt.DEPARTMENT_ID);
 select * from emp_dpt;
 commit;
 
+--SQL Order of Execution
+--Understanding How Queries Run
+--When writing SQL queries, we usually follow a certain order.
+--However, the SQL engines follow a specific order of execution when compiling queries, 
+--which is different from the typical order of writing.
+
+
 
 
 
