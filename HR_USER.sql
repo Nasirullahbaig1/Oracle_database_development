@@ -240,6 +240,15 @@ commit;
 --When writing SQL queries, we usually follow a certain order.
 --However, the SQL engines follow a specific order of execution when compiling queries, 
 --which is different from the typical order of writing.
+--FROM/JOIN: Specifies the tables from which to retrieve data.
+--WHERE: Filters the rows that meet the condition before grouping.
+--GROUP BY: Groups rows that share a property.
+--HAVING: Filters groups based on conditions, applied after grouping.
+--SELECT: Specifies the columns to retrieve or calculate.
+--DISTINCT: Removes duplicate rows from the result set.
+--ORDER BY: Sorts the result set by specified columns.
+--LIMIT: Specifies the maximum number of rows to return.
+--OFFSET: Specifies how many rows to skip before starting to return rows.
 
 
 
