@@ -1,0 +1,3 @@
+--set operators
+--set operators combine the result of two queries
+--query with set operator is called compound query
