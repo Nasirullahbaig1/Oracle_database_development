@@ -53,8 +53,18 @@ values(7, 'mutasim', 45000, 25);
 select * from sup;
 select * from mng;
 
+--adding union between two tables
+--it will give us a sorted table 
 select * from sup 
 union
 select * from mng;
 commit;
+
+--adding union all bwtween two tables
+--the output is not sorted
+select * from sup
+union all
+select * from mng;
+commit;
+
 
