@@ -32,3 +32,12 @@ where salary < 3000;
 select * from employees 
 where salary != 10000;
 
+--less or equal to 
+select * from employees
+where salary <= 10000;
+
+--greater or equal to
+select * from employees
+where salary >= 10000;
+
+--
