@@ -30,7 +30,7 @@ where salary < 3000;
 
 --Not equal to
 select * from employees 
-where salary != 10000;
+where salary <> 10000;
 
 --less or equal to 
 select * from employees
@@ -40,4 +40,41 @@ where salary <= 10000;
 select * from employees
 where salary >= 10000;
 
---
+--between 
+select * from employees
+where salary between 10000 and 15000;
+
+--not between 
+select * from employees
+where salary not between 10000 and 15000;
+
+--null
+select * from employees
+where salary is null;
+
+--not null
+select * from employees 
+where salary is not null;
+
+--IN 
+select * from employees 
+where salary in(24000, 10000,30000, 25000);
+
+--NOT IN
+select * from employees
+where salary not in (24000, 100000);
+
+--EXISTS
+select * from employees e
+where exists (select * from employees ee
+where e.employee_id = ee.employee_id
+and ee.last_name = 'Kochhar'
+);
+
+--NOT EXISTS
+select * from employees e
+where not exists (select * from employees ee
+where e.employee_id = ee.employee_id
+and ee.last_name = 'Kochhar'
+);
+commit;
