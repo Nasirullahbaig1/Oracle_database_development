@@ -10,8 +10,9 @@
     --combine result from both quries
     --gives result without removing duplicateds
 --MINUS
-    --
+    --Minus query remove the result of the second query from the first query
 --INTERSECT
+    --provide the common records from both quries and also removes the duplicates.
 
 create table sup (
     sup_id number,
@@ -67,4 +68,17 @@ union all
 select * from mng;
 commit;
 
+--minus between two columns
+--give the result of tabel A and minus 
+--with the reslut woth table B
+select * from sup
+minus
+select * from mng;
 
+--intersect
+--give the common records
+--remove the duplicates
+select * from sup
+intersect 
+select * from mng;
+commit;
