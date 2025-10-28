@@ -1,0 +1,9 @@
+--comparision operators in oracle
+--Equal =
+--inequality or not equal !=, ^=, <>
+--Greater then >
+--Less than <
+--[NOT] BETWEEN : bwteen two values - inclusive
+--[NOT] IN : Equal to any memeber of the list or query
+--[NOT] EXIST : If subquery of exist return any records then true
+--IS [NOT] NULL : Check if the value is null and return ture if its null
