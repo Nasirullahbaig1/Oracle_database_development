@@ -3,6 +3,8 @@
 --inequality or not equal !=, ^=, <>
 --Greater then >
 --Less than <
+--Greater then or equal to >=
+--Less than or equal to <=
 --[NOT] BETWEEN : bwteen two values - inclusive
 --[NOT] IN : Equal to any memeber of the list or query
 --[NOT] EXIST : If subquery of exist return any records then true
