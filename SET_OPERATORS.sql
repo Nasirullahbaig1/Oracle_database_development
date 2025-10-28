@@ -5,29 +5,56 @@
 --type of operators
 --UNION
   --combine result of two queries
-  --distinct records
+  --and removes the duplicates 
 --UNION ALL
     --combine result from both quries
-    --not nessory to be distinct
+    --gives result without removing duplicateds
 --MINUS
     --
 --INTERSECT
 
-select * from employees;
-info employees;
+create table sup (
+    sup_id number,
+    sup_name varchar(20),
+    sup_salary number,
+    sup_age number
+);
+create table mng (
+    mng_id number,
+    mng_name varchar(20),
+    mng_salary number,
+    mng_age number
+);
 
-create table emp1 as select EMPLOYEE_ID, FIRST_NAME, SALARY from employees;
-select * from emp1;
-info emp1;
+insert into sup
+values(1, 'nasir', 30000, 25);
+insert into sup
+values(2, 'kamal', 35000, 24);
+insert into sup
+values(1, 'nasir', 30000, 25);
+insert into sup
+values(3, 'faizan', 40000, 23);
+insert into sup
+values(4, 'aftab', 35000, 26);
 
-create table emp2 as select EMPLOYEE_ID, FIRST_NAME, SALARY from employees
-where salary > 10000;
-select * from emp2;
 
-update emp1
-set  FIRST_NAME = 'steve'
-where EMPLOYEE_ID <= 120;
+insert into mng
+values(5, 'faisal', 60000, 28);
+insert into mng
+values(2, 'kamal', 35000, 24);
+insert into mng
+values(1, 'nasir', 30000, 25);
+insert into mng
+values(6, 'danish', 20000, 21);
+insert into mng
+values(7, 'mutasim', 45000, 25);
 
-drop table emp2;
 
+select * from sup;
+select * from mng;
+
+select * from sup 
+union
+select * from mng;
+commit;
 
