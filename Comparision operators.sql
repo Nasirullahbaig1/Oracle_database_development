@@ -16,3 +16,19 @@
 --NOT - Return false if the following conditions is true
       --Return true if the following conditions are false
       
+--Equal
+select * from employees
+where salary = 10000;
+
+--Greater then
+select * from employees 
+where salary > 15000;
+
+--Less then
+select * from employees
+where salary < 3000;
+
+--Not equal to
+select * from employees 
+where salary != 10000;
+
