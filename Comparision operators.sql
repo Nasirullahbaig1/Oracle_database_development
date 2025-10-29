@@ -110,5 +110,45 @@ where NOT(salary >= 10000 and salary <= 20000);
 --LISTAGG
     --all values in the group conbined and seperated via provided delimeter ignore null values.
 
+select * from employees;
+select * from departments;
+
+--we counted the number of employees in each department
+select d.department_name, count(*) as number_of_employees
+from employees e
+join departments d
+on d.department_id=e.department_id
+group by d.department_name;
+
+--we can calculate the amount of salary in each department
+select d.department_name, count(*) as number_of_employees, sum(salary) as total_salary
+from employees e
+join departments d
+on d.department_id=e.department_id
+group by d.department_name;
+
+--finding the avarage of salaray
+select d.department_name, count(*) as number_of_employees, sum(salary) as total_salary, avg(salary) as avarage_salary
+from employees e
+join departments d
+on d.department_id=e.department_id
+group by d.department_name;
+
+--finding the min and max of salaray
+select d.department_name, count(*) as number_of_employees, 
+                        sum(salary) as total_salary, 
+                        trunc(avg(salary)) as avarage_salary, 
+                        min(salary) as min_salary, 
+                        max(salary) as max_salary
+from employees e
+join departments d
+on d.department_id=e.department_id
+group by d.department_name;
+
+
+
+
+
+
 
 
