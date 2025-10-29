@@ -92,4 +92,11 @@ where salary = 10000 OR salary = 17000;
 select * from employees 
 where NOT(salary >= 10000 and salary <= 20000);
 
+--GROUP BY
+--we extract the data from a table on the basis of a common data.
+--for example we can extract the hr as a group.
+
+
+
+
 
