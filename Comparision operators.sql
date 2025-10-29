@@ -92,11 +92,23 @@ where salary = 10000 OR salary = 17000;
 select * from employees 
 where NOT(salary >= 10000 and salary <= 20000);
 
---GROUP BY
+--GROUP BY--
 --we extract the data from a table on the basis of a common data.
 --for example we can extract the hr as a group.
 
-
+--Agregate Functions--
+--SUM
+    --sum of each value in the group. Ignore null values.
+--COUNT
+    --number of not null values in the group.
+--MIN
+    --minimum value in the group ignore null values.
+--MAX
+    --maximum value in the group ignore null values.
+--AVG
+    --avarage of all values in the group ignore null values.
+--LISTAGG
+    --all values in the group conbined and seperated via provided delimeter ignore null values.
 
 
 
