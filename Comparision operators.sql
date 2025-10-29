@@ -78,3 +78,18 @@ where e.employee_id = ee.employee_id
 and ee.last_name = 'Kochhar'
 );
 commit;
+
+--Logical operators
+--AND
+select * from employees 
+where salary >= 10000 and salary <= 20000;
+
+--OR
+select * from employees
+where salary = 10000 OR salary = 17000;
+
+--NOT
+select * from employees 
+where NOT(salary >= 10000 and salary <= 20000);
+
+
