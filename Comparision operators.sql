@@ -157,6 +157,10 @@ from employees
 group by DEPARTMENT_ID
 having count(*) > 5;
 
+--number of employees with aggregate function
+select count(*)
+from employees;
+
 
 
 
