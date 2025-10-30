@@ -161,7 +161,12 @@ having count(*) > 5;
 select count(*)
 from employees;
 
-
+--number of employees in Administration department
+select * 
+from employees e 
+join departments d
+on e.department_id = d.department_id
+where d.department_name in ('Administration');
 
 
 
