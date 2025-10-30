@@ -150,6 +150,12 @@ group by d.department_name;
 --used without group by clause but in the query where only 
 --aggregate functions are used in select clause.
 
+select * from employees;
+
+select DEPARTMENT_ID, sum(salary) 
+from employees
+group by DEPARTMENT_ID
+having count(*) > 5;
 
 
 
