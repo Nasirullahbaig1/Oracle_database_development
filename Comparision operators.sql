@@ -145,6 +145,12 @@ join departments d
 on d.department_id=e.department_id
 group by d.department_name;
 
+--HAVING clause
+--having clause is used with the group by clause and can also be 
+--used without group by clause but in the query where only 
+--aggregate functions are used in select clause.
+
+
 
 
 
