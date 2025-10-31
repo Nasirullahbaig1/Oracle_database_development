@@ -9,3 +9,11 @@
         select to_char (123) from dual;
         select to_char (date'2021-03-12') from dual;
         select to_char (date'2021-03-12', 'dd-mm-yyyy') from dual;
+        
+        --TO NUMBER:- convert char string to number using given format model or default specified.
+        select to_number ('03434298993') from dual;
+        select to_number ('034,342', '98,993') from dual;
+        
+        
+        
+        
