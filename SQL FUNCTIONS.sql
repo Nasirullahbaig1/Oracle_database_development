@@ -20,6 +20,19 @@
         select to_date('30-MAR-2021') from dual;
         select to_date('30-03-2021', 'dd-mm-yyyy') from dual;
         select to_date('03-2021-30', 'mm-yyyy-dd') from dual;
+        --we can use yy and rr in the year format
+        --rr means previoius centuery like 1900
+        --yy means the currently centuery like 2000
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
