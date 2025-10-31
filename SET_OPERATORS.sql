@@ -4,8 +4,8 @@
 
 --type of operators
 --UNION
-  --combine result of two queries
-  --and removes the duplicates 
+    --combine result of two queries
+    --and removes the duplicates 
 --UNION ALL
     --combine result from both quries
     --gives result without removing duplicateds
