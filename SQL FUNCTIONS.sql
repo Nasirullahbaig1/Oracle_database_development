@@ -14,6 +14,12 @@
         select to_number ('03434298993') from dual;
         select to_number ('034,342', '98,993') from dual;
         
+        --TO DATE:- convert char string to date using the given format.
+        --There is a format called NLS format for date we either write in the format or specify our format like dd-mm-yyyy.
+        select date'2021-03-30' from dual;
+        select to_date('30-MAR-2021') from dual;
+        select to_date('30-03-2021', 'dd-mm-yyyy') from dual;
+        select to_date('03-2021-30', 'mm-yyyy-dd') from dual;
         
         
         
