@@ -24,6 +24,15 @@
         --rr means previoius centuery like 1900
         --yy means the currently centuery like 2000
         
+--Null handeling function
+--NVL:- replave null value with another value
+select nvl(123,18) from dual;
+select nvl(null,18) from dual;
+
+--here we have replaced the null value in the department id with a default value using nvl.
+select EMPLOYEE_ID, FIRST_NAME, DEPARTMENT_ID from employees order by EMPLOYEE_ID;
+select EMPLOYEE_ID, FIRST_NAME, nvl(DEPARTMENT_ID, 10) from employees order by EMPLOYEE_ID;
+        
         
         
         
