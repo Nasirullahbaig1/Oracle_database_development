@@ -43,7 +43,25 @@ select nvl2('apple', 'tiger', 'lion') from dual;--first parameter is not null it
 select coalesce(123, 876, 4, 5) from dual;--return the first value.
 select coalesce(null, 876, 4, 5) from dual;--return the second value.        
 select coalesce(null, null, 4, 5) from dual;--return the third value.        
-select coalesce(null, null, null, 5) from dual;--return the forth value.         
+select coalesce(null, null, null, 5) from dual;--return the forth value.
+
+--NULL IF:- Accept two parameters and returns NULL if both values are same else return the first parameter.
+select nullif('4','4') from dual; --return null
+select nullif(4, 4) from dual; --return null
+select nullif (3, 5) from dual; --return 3
+
+--LNNVL:- it accepts the expression and returns true if expression is false or unknown,
+--returns falsel if expression is true.
+select * from employees;
+select * from employees where LNNVL(DEPARTMENT_ID > 90);
+--for exaple in the above querry the condition is false for most of the data 
+--but LNNLV convert the false into true and return those data
+--the main differentce between this and NOT is it handles null as unknow and return ture for them as well
+
+--CONDITIONAL FUNCTIONS
+--DECODE:- it accepts one expression if the value matches with the first search parameters then returns the first result.
+--if it matches with the second search parameter then returns the second result and so on.
+
         
         
         
