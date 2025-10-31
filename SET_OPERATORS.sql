@@ -20,6 +20,7 @@ create table sup (
     sup_salary number,
     sup_age number
 );
+
 create table mng (
     mng_id number,
     mng_name varchar(20),
