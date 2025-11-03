@@ -52,7 +52,21 @@ select floor(20/3) from dual;
 --MOD:- Accepts two arguments and provide the remaining of the first number divided by the second.
 --syntax: MOD(1st number, 2nd number)
 select (10/3) from dual;
-select mod(10,3) from dual; --the mod funtion gives us the reminder in simple words
+select mod(10,3) from dual; --the mod funtion gives us the reminder in simple words.
+
+--ROUND:- It round off the number. accepts two parameters first the number second the place to be rounded off.
+--syntax: ROUND(number1, [place to be round off])
+--It uses the round off rule when the number is 5.6 it will use the ceil funtion
+--if it is 6.3 it will use the floor function.
+select (10/3) from dual; --3.3333333
+select round(10/3) from dual; --3 (using the floor function)
+select 3.66666 from dual;
+select round(3.66666) from dual; --4 (using the ceil function)
+
+
+
+
+
 
 
 
