@@ -25,8 +25,31 @@ from employees;
 --because it execute from top to bottom if it matches the condition it won't go to the next condition.
 
 
+--NUMARIC FUCTIONS
+--these are the type of functions that work with numbers as the name indicates.
+--Few common are below
+--OPERATORS:- arthimatc operators +, -, *, /. These are the most common functions in any language.
+select 1000 + 3000 from dual;
+select EMPLOYEE_ID, FIRST_NAME, SALARY, SALARY*0.14 as SAL_INCREMENTS, SALARY + SALARY*0.14 AS TOTAL_SALARY from employees;
+--In the above qurrey we can sum two columns and make another one
 
+--ABS:- Absolute value of the number
+--syntex: ABS(number)
+--function of this function is like the mathimatics means it return the positve value always remove the negative sign.
+select (1000-3000) from dual; --give negative value
+select abs(1000-3000) from dual; -- give positive value
 
+--CEIL FUNCTION:- Ceiling value of the given number this value if always greater then the exact value.
+--syntex: CEIL(number)
+--mostly use to get rid off the decimal points in columns like salary etc
+select (20/3) from dual; --give:6.6666666
+select ceil(20/3) from dual; --give:7
+
+--FLOOR FUNCTION:- Floor value of the given number this value is less then the exact number.
+--syntex: FLOOR(number)
+select floor(20/3) from dual;
+
+--
 
 
 
