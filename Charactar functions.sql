@@ -36,6 +36,18 @@ select instr('nasirullahbaig', 'ullah') from dual;
 --syntax: REPLACE(input string, search string, [replace string])
 select replace('nasirullagkhan', 'khan', 'baig') from dual;
 
+--TRANSLATE:- replace the chars from one string with the chars of another string in a given string.
+--syntax: TRANSALATE(INPUT STRING, SEARCH STRING, REPLACE STRING)
+select translate('nasirullahkhan', 'khan', 'baig') from dual;
+--it look like same as replace but its not same it look char by char and replace the matching cahrs.
+
+
+
+
+
+
+
+
 
 
 
