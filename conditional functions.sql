@@ -1,0 +1,3 @@
+--CONDITIONAL FUNCTIONS
+--DECODE:- it accepts one expression if the value matches with the first search parameters then returns the first result.
+--if it matches with the second search parameter then returns the second result and so on.
