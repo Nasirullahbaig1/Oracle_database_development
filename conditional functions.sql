@@ -20,6 +20,11 @@ else 'unknown'
 end as discription
 from employees;
 --the key difference between these two functions if the flexlibility here we have more options to add conditons.
+--the second difference is it do not uses is null function to compare null values so two null values are not equal here.
+--if there are two conditoin that are true for a data then the first condition will be considered.
+--because it execute from top to bottom if it matches the condition it won't go to the next condition.
+
+
 
 
 
