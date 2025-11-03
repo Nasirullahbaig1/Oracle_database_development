@@ -62,7 +62,20 @@ select (10/3) from dual; --3.3333333
 select round(10/3) from dual; --3 (using the floor function)
 select 3.66666 from dual;
 select round(3.66666) from dual; --4 (using the ceil function)
+select round(3.66666, 2) from dual; --3.67 (round off till two decimal point)
 
+--TRUNC:- Truncate the number
+--it accepts two numbers and trucates the first number with the number of digits passed in the sencon parameter.
+--syntax: TRUNC (number1, [number of place to truncated])
+select trunc(14.769876987) from dual; -- 14
+select trunc(14.769876987, 4) from dual; -- 14.7698
+select trunc(14.769876987, 2) from dual; -- 14.76
+--In simple words it truncate the values after decemal point that is been added to the second parameter.
+
+--POWER:- it provides the power of one to other.
+--syntax: POWER(NUMBER, POWER)
+select power(10, 10) from dual; --100000000
+select power(10, 2) from dual; --100
 
 
 
