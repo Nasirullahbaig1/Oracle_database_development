@@ -49,7 +49,10 @@ select ceil(20/3) from dual; --give:7
 --syntex: FLOOR(number)
 select floor(20/3) from dual;
 
---
+--MOD:- Accepts two arguments and provide the remaining of the first number divided by the second.
+--syntax: MOD(1st number, 2nd number)
+select (10/3) from dual;
+select mod(10,3) from dual; --the mod funtion gives us the reminder in simple words
 
 
 
