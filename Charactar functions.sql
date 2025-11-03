@@ -28,7 +28,17 @@ select length('  abc  ') from dual; --the space is also count in the length
 select EMPLOYEE_ID, FIRST_NAME, SUBSTR(last_name, 2, 4) from employees;
 select substr('nasirullahbaig', 6, 5) from dual; -- ullah
 
---
+--INSTR:- it returns the first postion of the string in another string.
+--syntax: INSTR(STRING, SEARCH STRING)
+select instr('nasirullahbaig', 'ullah') from dual;
+
+--REPLACE:- replaces one set of chars with another set of chars in the given string.
+--syntax: REPLACE(input string, search string, [replace string])
+select replace('nasirullagkhan', 'khan', 'baig') from dual;
+
+
+
+
 
 
 
