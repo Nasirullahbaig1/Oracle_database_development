@@ -20,7 +20,18 @@ select initcap('cow is on the road') from dual;
 
 --LENGHT:- return the lenght of the given string.
 --syntax: LENGHT(SRRING)
-select EMPLOYEE_ID, FIRST_NAME, LENGHT(last_name) from employees;
+select EMPLOYEE_ID, FIRST_NAME, LAST_NAME, LENGTH(last_name) from employees;
+select length('  abc  ') from dual; --the space is also count in the length
+
+--SUBSTR(SUB-STRING):- return the sub string of the input string starting from position perameter to n characters.
+--syntax: SUBSTR(STRING, POSITION, [NUMBER OF CHARACTERS])
+select EMPLOYEE_ID, FIRST_NAME, SUBSTR(last_name, 2, 4) from employees;
+select substr('nasirullahbaig', 6, 5) from dual; -- ullah
+
+--
+
+
+
 
 
 
