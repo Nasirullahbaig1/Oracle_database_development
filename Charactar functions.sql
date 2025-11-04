@@ -41,7 +41,30 @@ select replace('nasirullagkhan', 'khan', 'baig') from dual;
 select translate('nasirullahkhan', 'khan', 'baig') from dual;
 --it look like same as replace but its not same it look char by char and replace the matching cahrs.
 
+--RPAD:- pad the given string in the right with number of characters passsed in the string.
+--syntax: RPAD(INPUT STRING, LENGTH, CHAR TO PAD)
+--In simple words it add char to the right side of the string
+select rpad('nasirullahbaig', 20, 'sardar') from dual;
+select EMPLOYEE_ID, LAST_NAME, rpad(last_name, 10, '*') from employees;
+--the above query add the * char in the right side of the string till its lenght become 10
 
+--LPAD:- Pad given string in the right with number of char passed in the string.
+--syntx: LPAD(INPUT STRING, LENGTH, CHAR TO PAD)
+select EMPLOYEE_ID, first_name, LAST_NAME, lpad(last_name, 10, first_name) from employees;
+--it can be used when we have to add first name and last name toughter.
+
+--RTRIM:- Trim the chars from the right side of the input string.
+--syntax: RTRIM(INPUT STRING, CAHR TO TRIM)
+select rtrim('nasirullahbaig', 'baig') from dual;
+--this querry trip the mentioned chars from the right side of the string.
+
+--LTRIM:- Trim the chars from the left side of the input string
+--sytax: LTRIM(INPUT STRING, CHAR TO TRIM)
+select ltrim('nasirullahbaig', 'nasir') from dual;
+
+--TRIM:- this function can trim the given char from both side of the string.
+--syntax: TRIM(INPUT STRING, CHAR TO TRIM)
+select trim('*' from '***nasirullahbaig****') from dual;
 
 
 
