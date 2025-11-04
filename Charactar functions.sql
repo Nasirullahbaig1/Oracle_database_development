@@ -66,6 +66,27 @@ select ltrim('nasirullahbaig', 'nasir') from dual;
 --syntax: TRIM(CAHR TRIIM, FROM, INPUT STRING)
 select trim('*' from '***nasirullahbaig****') from dual;
 
+--CONCAT:- Merges two strings
+--syntax: CONCAT(INPUT STRING 1, INPUT STRING 2)
+--operator: ||
+select concat('nasir Ullah', ' Baig') from dual;
+select EMPLOYEE_ID, first_name, LAST_NAME, concat(concat(first_name, ' '), last_name) from employees;
+select EMPLOYEE_ID, first_name, LAST_NAME, first_name || ' ' || LAST_NAME from employees;
+--This two functions do the same job but the second one is easy through operator.
+
+--ASCII:- Provides the ASCII value of the given char.
+--syntax: ASCII(INPUT CHARS)
+select ascii('ab') from dual;
+
+
+
+
+
+
+
+
+
+
 
 
 
