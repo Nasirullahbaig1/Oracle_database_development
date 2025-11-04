@@ -63,7 +63,7 @@ select rtrim('nasirullahbaig', 'baig') from dual;
 select ltrim('nasirullahbaig', 'nasir') from dual;
 
 --TRIM:- this function can trim the given char from both side of the string.
---syntax: TRIM(INPUT STRING, CHAR TO TRIM)
+--syntax: TRIM(CAHR TRIIM, FROM, INPUT STRING)
 select trim('*' from '***nasirullahbaig****') from dual;
 
 
