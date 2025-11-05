@@ -19,7 +19,8 @@
 --Uses bitmap to point the values.
 --usually used on a data like gender where most of the data is male or female.
 --Bitmap indexing stores the null values as well.
-
-
+--syntax: create [BITMAP] index <index_name>
+--        on <table_name>
+--        (<column1> [<column2>, .....]);
  
 
