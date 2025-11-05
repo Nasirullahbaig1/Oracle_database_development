@@ -9,10 +9,15 @@
 --values are stored in a balanced tree format.
 --Good for primary key
 --This is also called binery tree which means one parents can can two children.
+--B-tree indexing do not store the null values.
+--B-tree can have maximum 32 columns.
+
 
 --Bitmap:- It is used when distinct values of the indexed columns are limited.
 --Uses bitmap to point the values.
 --usually used on a data like gender where most of the data is male or female.
+--Bitmap indexing stores the null values as well.
+
 
  
 
