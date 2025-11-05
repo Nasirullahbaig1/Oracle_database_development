@@ -22,5 +22,8 @@
 --syntax: create [BITMAP] index <index_name>
 --        on <table_name>
 --        (<column1> [<column2>, .....]);
+select * from employees;
+create index bitmap_index_employees_d_id 
+on employees (department_id);
  
 
