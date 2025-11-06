@@ -17,3 +17,34 @@
 
 --Alter sequance - we can alter all the sequance perameters expect START WITH using ALTER SEQUANCE command.
 
+create sequence basic_sequence;
+select basic_sequence.nextval from dual;
+
+create sequence sales_person_seq
+minvalue 1
+maxvalue 99999
+start with 4
+increment by 1;
+
+select sales_person_seq.nextval from dual;
+select sales_person_seq.nextval from dual;
+
+create sequence jumping_seq
+minvalue 1
+maxvalue 9999999999
+increment by 1000
+start with 15;
+
+select jumping_seq.nextval from dual; --5 times -- 4015
+
+alter sequence jumping_seq 
+increment by -3766;
+
+select jumping_seq.nextval from dual;
+
+alter sequence jumping_seq 
+increment by 1;
+
+select jumping_seq.nextval from dual;
+
+
