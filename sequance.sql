@@ -6,4 +6,11 @@
 
 --NEXTVAL(give next value of the sequance) and CURRVAL(give the current value of the sequance)
 --can be used on a sequance.
+--CURRVAL will only give you output if NEXTAVL is used in the same session before CURRVAL is used.
+--syntax: CREATE SEQUANCE <SEQUANCE VALUE>
+--        [MINVALUE <min_value>]
+--        [MAXVALUE <max_value>]
+
+
+
 
