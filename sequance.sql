@@ -10,7 +10,10 @@
 --syntax: CREATE SEQUANCE <SEQUANCE VALUE>
 --        [MINVALUE <min_value>]
 --        [MAXVALUE <max_value>]
+--        [START WITH <value>]
+--        [INCREMENT BY <increment_value>]
+--        [CYCLE | NONCYCLE]
+--        [CACHE <no_of_values_to_be_cached> | NONCACHE]
 
-
-
+--Alter sequance - we can alter all the sequance perameters expect START WITH using ALTER SEQUANCE command.
 
