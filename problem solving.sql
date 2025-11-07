@@ -35,3 +35,7 @@ select * from table1 where col5='A';
 select * from table1
 where 'A' in (col1, col2, col3, col4, col5);
 
+--using the LIKE clause
+select * from table1
+where col1 || col2 || col3 || col4 || col5 like '%A%';
+
