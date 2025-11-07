@@ -1,24 +1,42 @@
 --CONDITIONAL FUNCTIONS
 select * from employees;
 
---DECODE:- it accepts one expression if the value matches with the first search parameters then returns the first result.
---if it matches with the second search parameter then returns the second result and so on.
-select employee_id, first_name,
-decode(department_id, 80, 'Belong to HR dep', 50, 'Belong to IT dep', 'unknown') as discription from employees;
+--DECODE:- The DECODE function is another way to implement conditional logic. 
+--It performs similarly to a CASE expression but with a simpler syntax. 
+--The DECODE function compares an expression with a set of values and returns a result based on the first matching value.
+
+SELECT first_name, department_id, salary,
+       DECODE(department_id, 50, 1.5 * salary,
+                             12, 2.0 * salary,
+                             salary) AS "REVISED SALARY"
+FROM Employee;
+
 --The above querry performs two functions 
 --it searches dep_id column for the given if in dep_id and give the related result
 --then it will move to the second sreach and compare it in the column and then give that result also.
 --NOTE: usually null != to another null but in the case of decode null = null.
 --because decode function uses is null clause while comparing two nulls. 
 
---CASE EXPRESSION:- It is same as decode but with more flexible syntax.
+--CASE EXPRESSION:- The CASE expression is the most common and flexible conditional expression in SQL. 
+--It allows us to perform conditional logic directly within our SELECT statement, 
+--much like IF-THEN-ELSE logic in traditional programming languages.
+
+SELECT first_name, department_id, salary,
+       CASE department_id 
+           WHEN 50 THEN 1.5 * salary
+           WHEN 12 THEN 2.0 * salary
+           ELSE salary
+       END AS "REVISED SALARY"
+FROM Employee;
+
 select employee_id, first_name,
-case department_id 
-when 80 then 'Belong to HR dep'
-when 50 then 'Belong to IT dep'
-else 'unknown'
-end as discription
+    case department_id 
+        when 80 then 'Belong to HR dep'
+        when 50 then 'Belong to IT dep'
+        else 'unknown'
+    end as discription
 from employees;
+
 --the key difference between these two functions if the flexlibility here we have more options to add conditons.
 --the second difference is it do not uses is null function to compare null values so two null values are not equal here.
 --if there are two conditoin that are true for a data then the first condition will be considered.
