@@ -58,10 +58,6 @@ select * from employees where LNNVL(DEPARTMENT_ID > 90);
 --but LNNLV convert the false into true and return those data
 --the main differentce between this and NOT is it handles null as unknow and return ture for them as well
 
---CONDITIONAL FUNCTIONS
---DECODE:- it accepts one expression if the value matches with the first search parameters then returns the first result.
---if it matches with the second search parameter then returns the second result and so on.
-
         
         
         
