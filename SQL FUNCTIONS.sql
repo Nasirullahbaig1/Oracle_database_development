@@ -38,7 +38,7 @@ select EMPLOYEE_ID, FIRST_NAME, nvl(DEPARTMENT_ID, 10) from employees order by E
 select nvl2('', 'tiger', 'lion') from dual;--first parameter is null it will return the third parameter.
 select nvl2('apple', 'tiger', 'lion') from dual;--first parameter is not null it will reutrn the second parameter.
         
---COALESCE:- it accpts two or more paremeters and return the the furst not null value in the list.
+--COALESCE:- it accpts two or more paremeters and return the the first not null value in the list.
 --if all parameters contain null values then it return null vlaue.
 select coalesce(123, 876, 4, 5) from dual;--return the first value.
 select coalesce(null, 876, 4, 5) from dual;--return the second value.        
