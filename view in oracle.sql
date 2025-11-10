@@ -45,6 +45,13 @@ select * from low_salary_emp_view3;
 --the difference is we can can not add or update data in the main table through view in non updatable view.
 --the non updatable view is the one where where we have used some function in the columns.
 
+--MATERIALIZED VIEW
+--unlike view materalized view stores the data in the same table created automatically by oracle
+--with the same name as materalized view.
+--Mataralized view mantain the copy of data from its base tables.
+
+
+
 
 
 
