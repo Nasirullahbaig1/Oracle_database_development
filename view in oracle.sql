@@ -35,6 +35,17 @@ select FIRST_NAME || ' ' || LAST_NAME as FULL_NAME, SALARY, DEPARTMENT_ID from e
 where salary < 10000;
 select * from low_salary_emp_view3;
 
+--we have replaced the null value in department id with zero.
+create or replace view low_salary_emp_view3 as 
+select FIRST_NAME || ' ' || LAST_NAME as FULL_NAME, SALARY, coalesce(DEPARTMENT_ID, 0) as DEPARTMENT_ID from employees
+where salary < 10000;
+select * from low_salary_emp_view3;
+
+
+
+
+
+
 
 
 
