@@ -14,6 +14,31 @@
 --      [WITH CHECK OPTION]
 --if the a view exist already with the same name it will not give us error insted it will replace it.
 
+select * from employees;
+
+create or replace view low_salary_emp_view as 
+select * from employees
+where salary < 10000;
+
+select * from low_salary_emp_view;
+
+--below we will add some of the columns for security reasons.
+create or replace view low_salary_emp_view2 as 
+select FIRST_NAME, LAST_NAME, SALARY, DEPARTMENT_ID from employees
+where salary < 10000;
+
+select * from low_salary_emp_view2;
+
+--blow we have concatinate the first name and last name and showed them in one column.
+create or replace view low_salary_emp_view3 as 
+select FIRST_NAME || ' ' || LAST_NAME as FULL_NAME, SALARY, DEPARTMENT_ID from employees
+where salary < 10000;
+select * from low_salary_emp_view3;
+
+
+
+
+
 
 
 
