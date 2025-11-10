@@ -41,7 +41,9 @@ select FIRST_NAME || ' ' || LAST_NAME as FULL_NAME, SALARY, coalesce(DEPARTMENT_
 where salary < 10000;
 select * from low_salary_emp_view3;
 
-
+--we can create two types of views one is updateable and the other one is non updatable
+--the difference is we can can not add or update data in the main table through view in non updatable view.
+--the non updatable view is the one where where we have used some function in the columns.
 
 
 
