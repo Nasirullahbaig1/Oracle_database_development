@@ -1,0 +1,3 @@
+--VIEW IN ORACLE
+--view is the logical table which represents another table or view.
+--view does not store any sort of data. its a virtual table or named query.
