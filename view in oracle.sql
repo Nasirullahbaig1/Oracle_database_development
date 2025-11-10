@@ -8,3 +8,20 @@
 --However if we have used an aggregate function, join, union(or any set operator), 
 --distinct or group by then such a view cannot be updated.
 
+--create view syntax
+--CREATE [OR REPLACE] VIEW <view name> as 
+--      <SELECT query>
+--      [WITH CHECK OPTION]
+--if the a view exist already with the same name it will not give us error insted it will replace it.
+
+
+
+
+
+
+
+
+
+
+
+
