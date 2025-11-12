@@ -1,0 +1,3 @@
+--SYNONYM IN ORACLE
+--synonym is the alternative name of the object like table, view, sequance, procedure, etc.
+--CREATE SYNONYM or CREATE ANY SYNONYM privalige are required.
