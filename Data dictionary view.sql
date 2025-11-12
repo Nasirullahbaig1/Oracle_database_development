@@ -1,0 +1,4 @@
+--DATA DICTIONARY VIEWS
+--there are data dictionary tables maintained by oracle but they are not directly
+--accessible to us. we can access the view privided by oracle with read only 
+--access on those tables.
