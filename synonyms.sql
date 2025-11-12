@@ -8,3 +8,4 @@
 --FOR [schema.] object_name [@dblink]
 
 --it hides the actual owner and name of the object.
+create or replace synonym emp for employees;
