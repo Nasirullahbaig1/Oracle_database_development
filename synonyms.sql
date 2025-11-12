@@ -7,3 +7,4 @@
 --[schema] synonym_name
 --FOR [schema.] object_name [@dblink]
 
+--it hides the actual owner and name of the object.
