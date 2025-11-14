@@ -14,4 +14,10 @@
 --DBA_views
     --all the relevent information present in entire database.
     --all schemas in the database.
-    
+
+select * from all_all_tables where owner = 'HR';
+
+
+
+
+
