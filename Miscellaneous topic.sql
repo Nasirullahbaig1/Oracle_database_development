@@ -17,3 +17,7 @@
 --KEY TERMS:
 --WITH CLAUSE:- This keywords makes the start of the CTE. It also enables us to define
 --one or more CTEs that we can refer to within the main query.
+
+--cte_name:- This is the name given to the CTE. we can refer to this name in the main query as if 
+--it were a table.
+
