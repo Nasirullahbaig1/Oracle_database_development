@@ -3,4 +3,4 @@
 --CTE make complex qureries eaiser to write and understand by creating temporary result sets.
 --We can use it multiple time in the same query.
 --It help to organize and simplify your code.
---
+--sytax: cte_name [(column_name),[col_name]....)] as (subquery)
