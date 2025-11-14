@@ -16,6 +16,16 @@
     --all schemas in the database.
 
 select * from all_all_tables where owner = 'HR';
+select * from all_tables where owner = 'HR';
+select * from all_objects where owner = 'HR';
+select * from all_objects where owner ='HR' and object_type = 'TABLE';
+
+select * from all_tab_cols where owner = 'HR';
+select * from all_tab_columns where owner ='HR';
+
+
+
+
 
 
 
