@@ -14,3 +14,6 @@
 --SELECT * 
 --FROM cte_name;
 
+--KEY TERMS:
+--WITH CLAUSE:- This keywords makes the start of the CTE. It also enables us to define
+--one or more CTEs that we can refer to within the main query.
