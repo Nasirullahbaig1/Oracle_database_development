@@ -21,3 +21,4 @@
 --cte_name:- This is the name given to the CTE. we can refer to this name in the main query as if 
 --it were a table.
 
+--AS:- This keyword is used to define the query that produces the result set for the CTE.
