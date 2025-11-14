@@ -22,3 +22,30 @@
 --it were a table.
 
 --AS:- This keyword is used to define the query that produces the result set for the CTE.
+
+--CTE Query: The query inside the CTE may be a normal SQL query. It can select data from tables, 
+--perform joins, apply filters, etc.
+
+--Main Query: You can refer to it in the main query after defining the CTE. This main query can 
+--select data from the result set produced by CTE, or this result can also be joined to other tables, 
+--or can be used in any other SQL operation.
+
+--Benefits of Using CTEs:
+--Readability Improved
+--Reusability
+--Modularity
+--Recursive Query Support
+
+
+
+
+
+
+
+
+
+
+
+
+
+
