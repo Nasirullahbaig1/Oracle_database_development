@@ -1,0 +1,6 @@
+--COMMON TABLE EXPRESSION IN ORACLE SQL
+--Generaly reffered to CTE.
+--CTE make complex qureries eaiser to write and understand by creating temporary result sets.
+--We can use it multiple time in the same query.
+--It help to organize and simplify your code.
+--
