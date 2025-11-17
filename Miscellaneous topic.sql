@@ -47,6 +47,13 @@ where d.department_id in
 group by department_id
 having count(case when salary >= 10000 then 1 end)>1);
 
+with dep_10k_more as (
+    select department_id from employees
+    group by department_id
+    having count(case when salary >= 10000 then 1 end)>1)    
+select * from departments d join employees e on d.department_id = e.department_id
+join dep_10k_more d10 on d.department_id = d10.department_id;
+
 
 
 
