@@ -52,6 +52,16 @@ select employee_id, Full_name, manager_id
 from EmployeHirarcy;
 
 
+select * from departments;
+select * from employees order by salary desc;
+
+select * from departments d join employees e on d.department_id = e.department_id
+where d.department_id in
+(select department_id from employees
+group by department_id
+having count(case when salary >= 10000 then 1 end)>1);
+
+
 
 
 
