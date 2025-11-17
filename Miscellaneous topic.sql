@@ -47,6 +47,8 @@ where d.department_id in
 group by department_id
 having count(case when salary >= 10000 then 1 end)>1);
 
+--the same above function using CTE function
+
 with dep_10k_more as (
     select department_id from employees
     group by department_id
