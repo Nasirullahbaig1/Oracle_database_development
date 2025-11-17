@@ -38,20 +38,6 @@
 
 select * from employees;
 
-with recursive EmployeHirarcy as(
-    select employee_id, (first_name ||' ' || last_name) as Full_name, manager_id
-    from employees
-    where manager_id is null
-    union all
-    select employee_id, (first_name ||' ' || last_name) as Full_name, manager_id
-    from employees e
-    inner join EmployeHirarcy eh 
-    on e.manager_id = eh.manager_id
-)
-select employee_id, Full_name, manager_id
-from EmployeHirarcy;
-
-
 select * from departments;
 select * from employees order by salary desc;
 
