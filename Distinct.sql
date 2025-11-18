@@ -27,6 +27,16 @@ select to_date('32-10-2002','dd-mm-yyyy') from dual; --month error
 select to_date('31-11-2025' default '12-1-2002' on conversion error, 'dd-mm-yyyy') from dual;
 select to_number('$234' default -1 on conversion error) from dual;
 
+--LIKE CONDITION
+--like condition is used for pattern matching.
+--It matches the portion of one string into another and evaluates to true or false
+--based on the on the pattern matching
+--syntax:
+--SELECT
+--FROM
+--WHERE COLUMN/EXPRESSSION [NOT] LIKE [ESCAPE CHARACTER]
+
+
 
 
 
