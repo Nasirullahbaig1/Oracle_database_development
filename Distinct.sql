@@ -45,10 +45,13 @@ select to_number('$234' default -1 on conversion error) from dual;
 --Oracle consider it as character  instead of pattern matching special characters.
 
 select * from employees
-where first_name like 'R%';
+where first_name like 'R%'; --This means the first name start with cpital R.
 
 select * from employees
-where first_name like 'R%';
+where first_name like '%r'; --This means the first name ends with r.
+
+select * from employees
+where first_name like '%r%'; --This will give us the name contain r in the middle somewhere.
 
 
 
