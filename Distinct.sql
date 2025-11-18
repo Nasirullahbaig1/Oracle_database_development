@@ -20,8 +20,13 @@ select distinct manager_id from employees where manager_id is not null order by 
 --in this situation our converion function also fails to interpret this 
 --here we use default conversion functions to tackle the problem.
 
+select to_date('30-03-2002','dd-mm-yyyy') from dual;
+select to_date('30-13-2002','dd-mm-yyyy') from dual; --invalid month error
+select to_date('32-10-2002','dd-mm-yyyy') from dual; --month error
+--these are the types of error we would face
+select to_date('31-11-2025' default '12-1-2002' on conversion error, 'dd-mm-yyyy') from dual;
 
-
+SELECT * FROM v$version;
 
 
 
