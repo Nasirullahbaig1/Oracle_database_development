@@ -35,6 +35,25 @@ select to_number('$234' default -1 on conversion error) from dual;
 --SELECT
 --FROM
 --WHERE COLUMN/EXPRESSSION [NOT] LIKE [ESCAPE CHARACTER]
+--PATTERN:-
+--UNDERSCORE(_):-   matches exactly one character.
+--percentage()%:- matches zero or more characters.
+
+--ESCAPE CHARACTER:
+--must be one character only
+--you can include the actual characters % or _ in pattern by using the ESCAPE character.
+--Oracle consider it as character  instead of pattern matching special characters.
+
+select * from employees
+where first_name like 'R%';
+
+select * from employees
+where first_name like 'R%';
+
+
+
+
+
 
 
 
