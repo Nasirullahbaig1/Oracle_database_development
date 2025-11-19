@@ -56,7 +56,19 @@ where first_name like '%r%'; --This will give us the name contain r in the middl
 --here comes the escape character which means when we have to use or search for lirtal % or _
 --that time we have to use \ escape character.
 
+--MULTITABLE INSERT
+--insert all
+--insert first
 
+--Unconditional insert all
+--used to insert multiple records which is generated via driving query or constant values into multiple tables via single SQL statemtnt.
+--syntax:
+--INSERT ALL
+--INTO table1 (column_list) values
+--(expression_from_select_query_or_value)
+--INTO table2 (column_list) values
+--(expression_from_select_query_or_value)
+--SELECT column_list FROM...
 
 
 
