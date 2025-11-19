@@ -53,6 +53,11 @@ where first_name like '%r'; --This means the first name ends with r.
 select * from employees
 where first_name like '%r%'; --This will give us the name contain r in the middle somewhere.
 
+--here comes the escape character which means when we have to use or search for lirtal % or _
+--that time we have to use \ escape character.
+
+
+
 
 
 
