@@ -71,6 +71,16 @@ where first_name like '%r%'; --This will give us the name contain r in the middl
 --SELECT column_list FROM...
 
 
+--TRANSFORMMING COLUMNS INTO ROWS
+--Here we change the rows into columns and coumns into rows. 
+--PIVOT:
+--This clause is used to respose rows into columns. data like key-value pair can be concerted into columns.
+--
+
+
+
+
+
 
 
 
