@@ -83,6 +83,14 @@ where first_name like '%r%'; --This will give us the name contain r in the middl
 --  AGGRIGATE_FUCNTION()
 --  FOR COLUMN_NAME IN()
 --)
+--Values in the IN list will be converted to columns. Numbers of columns must be defined at time of execution of the query.
+
+create table results(
+    student_name varchar2(20),
+    subject_name varchar2(20),
+    marks number
+);
+
 
 
 
