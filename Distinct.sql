@@ -90,8 +90,26 @@ create table results(
     subject_name varchar2(20),
     marks number
 );
+insert into results
+values('nasir', 'maths', 80);
+insert into results
+values('nasir', 'physics', 70);
+insert into results
+values('nasir', 'chemistry', 73);
+insert into results
+values('faizan', 'maths', 87);
+insert into results
+values('faizan', 'physics', 88);
+insert into results
+values('faizan', 'chemistry', 81);
+insert into results
+values('mustansir', 'maths', 60);
+insert into results
+values('mustansir', 'physics', 72);
 
+select * from results;
 
+--n
 
 
 
