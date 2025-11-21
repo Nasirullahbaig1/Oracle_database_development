@@ -122,6 +122,15 @@ PIVOT
 --UN-PIVOT:-
 --its opposite of PIVOT and conditional aggregation.
 --Its converted the data from columns to row.
+--syntax:
+--SELECT * FROM table_name
+--UNPIVOT[{INCLUDE | EXCLUDE} NULLS](
+--  unpivot_new_column_name_values,
+--  for unpivot_new_column_name_key
+--  in(
+--      current_column_names as value to be displayed in final result
+--      )
+-- )
 
 
 
