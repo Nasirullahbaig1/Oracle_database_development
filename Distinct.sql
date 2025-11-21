@@ -119,7 +119,9 @@ PIVOT
 );
 --the column name which we do not used inside the pivot will be applied as grouped on.
 
-
+--UN-PIVOT:-
+--its opposite of PIVOT and conditional aggregation.
+--Its converted the data from columns to row.
 
 
 
