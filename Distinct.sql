@@ -134,7 +134,7 @@ drop table student_in_one_row;
 --      )
 -- )
 desc student_in_one_row;
-
+create table unpivot_table as
 select * from student_in_one_row
 unpivot include nulls
 (
@@ -144,6 +144,7 @@ unpivot include nulls
         maths as 'maths', physics as 'physics', chemistry as 'chemistry'
     )
 );
+select * from unpivot_table;
 
 
 
