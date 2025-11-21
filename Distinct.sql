@@ -110,13 +110,15 @@ values('mustansir', 'physics', 72);
 select * from results;
 
 --now we will transpose the rows and columns
+create table student_in_one_row as
 select * from
     (select * from results)
 PIVOT
 (
     SUM(marks)
-    for subject_name in ('maths', 'physics', 'chemistry')
+    for subject_name in ('maths' as maths, 'physics' as physics, 'chemistry' as chemistry)
 );
+drop table student_in_one_row;
 --the column name which we do not used inside the pivot will be applied as grouped on.
 
 --UN-PIVOT:-
@@ -131,6 +133,17 @@ PIVOT
 --      current_column_names as value to be displayed in final result
 --      )
 -- )
+desc student_in_one_row;
+
+select * from student_in_one_row
+unpivot include nulls
+(
+    marks
+    for subject in 
+    (
+        maths as 'maths', physics as 'physics', chemistry as 'chemistry'
+    )
+);
 
 
 
