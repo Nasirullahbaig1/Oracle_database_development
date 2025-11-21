@@ -109,7 +109,15 @@ values('mustansir', 'physics', 72);
 
 select * from results;
 
---n
+--now we will transpose the rows and columns
+select * from
+    (select * from results)
+PIVOT
+(
+    SUM(marks)
+    for subject_name in ('maths', 'physics', 'chemistry')
+);
+--the column name which we do not used inside the pivot will be applied as grouped on.
 
 
 
