@@ -1,1 +1,27 @@
-commit;
+CREATE TABLE spotify_data (
+    artist           VARCHAR2(200),
+    track            VARCHAR2(300),
+    album            VARCHAR2(200),
+    album_type       VARCHAR2(200),
+    danceability     NUMBER,
+    energy           NUMBER,
+    loudness         NUMBER,
+    speechiness      NUMBER,
+    acousticness     NUMBER,
+    instrumentalness NUMBER,
+    liveness         NUMBER,
+    valence          NUMBER,
+    tempo            NUMBER,
+    duration_min     FLOAT,
+    title            VARCHAR2(300),
+    channel          VARCHAR2(200),
+    views            NUMBER,
+    likes            NUMBER,
+    comments         NUMBER,
+    licensed         VARCHAR2(5) CHECK ( licensed IN ( 'TRUE', 'FALSE' ) ),
+    official_video   VARCHAR2(5) CHECK ( official_video IN ( 'TRUE', 'FALSE' ) ),
+    stream_s         NUMBER,
+    energyliveness   NUMBER,
+    most_playedon    VARCHAR2(200)
+);
+
