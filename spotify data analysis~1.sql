@@ -15,6 +15,11 @@ where DURATION_MIN = 0;
 delete from spotify_data_table
 where DURATION_MIN =0;
 
+select count(distinct CHANNEL) from spotify_data_table;
+
+select distinct MOST_PLAYEDON from spotify_data_table;
+commit;
+
 
 
 
