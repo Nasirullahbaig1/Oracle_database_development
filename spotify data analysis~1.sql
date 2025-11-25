@@ -20,6 +20,33 @@ select count(distinct CHANNEL) from spotify_data_table;
 select distinct MOST_PLAYEDON from spotify_data_table;
 commit;
 
+------------------------------------------------------------------------
+--Some business problems to solve
+------------------------------------------------------------------------
+--retrive all the tracks that have more then 1 billion streams.
+select * from spotify_data_table
+where STREAM > 1000000000;
+
+select count(*) from spotify_data_table
+where STREAM > 1000000000;
+
+--List all the the albums along with their respective artists.
+select ARTIST, ALBUM from spotify_data_table
+group by ARTIST, ALBUM
+order by ARTIST;
+
+--Get the total number of comments for tracks where licensed = TRUE
+select count(COMMENTS) from spotify_data_table
+where LICENSED = 'TURE';
+
+
+
+
+
+
+
+
+
 
 
 
