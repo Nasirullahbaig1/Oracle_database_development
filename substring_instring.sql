@@ -25,9 +25,46 @@ NVL(SUBSTR(FULLNAME, 1, INSTR(FULLNAME, ' ', 1, 1) -1), FULLNAME) AS FIRST_NAME,
 SUBSTR(FULLNAME,
         INSTR(FULLNAME, ' ', 1, 1) + 1, --7
         INSTR(FULLNAME, ' ', 1, 2) - INSTR(FULLNAME, ' ', 1, 1) - 1) AS middle_name_instr,--12 -6 -1 = 5
-SUBSTR(FULLNAME,
-           INSTR(FULLNAME, ' ', 1, DECODE(INSTR(FULLNAME, ' ', 1, 2), 0, 1, 2)) + 1,
-           LENGTH(FULLNAME)) AS last_name_instr
+--NVL2(expression1, expression2, expression3)
+NVL2(INSTR(FULLNAME, ' ', 1, 1),        
+        SUBSTR(FULLNAME,
+                   INSTR(FULLNAME, ' ', 1, DECODE(INSTR(FULLNAME, ' ', 1, 2), 0, 1, 2)) + 1,
+                   LENGTH(FULLNAME)), 
+                   NULL )AS last_name_instr 
 FROM NAMES;
 
-select fullname, INSTR(FULLNAME, ' ', 1, 1)-1 from names;
+
+--Below we will use the case funtion to handle the above cases.
+SELECT FULLNAME,
+--FOR FIRST NAME
+NVL(SUBSTR(FULLNAME, 1, INSTR(FULLNAME, ' ', 1, 1) -1), FULLNAME) AS FIRST_NAME,
+--FOR MIDDLE NAME
+CASE
+    WHEN INSTR(FULLNAME, ' ', 1, 2) > 0
+        THEN SUBSTR(FULLNAME,
+            INSTR(FULLNAME, ' ', 1, 1) +1,
+            INSTR(FULLNAME, ' ', 1, 2) - INSTR(FULLNAME, ' ', 1, 1) -1)
+        ELSE
+            NULL
+END AS MIDDLE_NAME,
+--FOR LAST NAME
+CASE
+    WHEN INSTR(FULLNAME, ' ', 1, 1) = 0
+        THEN NULL
+    ELSE
+        SUBSTR(FULLNAME,
+            INSTR( FULLNAME, ' ', 1, DECODE(INSTR(FULLNAME, ' ', 1, 2), 0, 1, 2)) + 1, LENGTH(FULLNAME))
+END AS LAST_NAME
+FROM NAMES;
+
+
+
+
+
+
+
+
+
+
+
+
