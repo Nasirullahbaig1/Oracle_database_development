@@ -44,6 +44,19 @@ select count(COMMENTS) as Total_comments
 from spotify_data_table
 where LICENSED = 'False';
 
+--Find all the tracks that belong to the album type single
+select track, album_type from spotify_data_table
+where album_type = 'single';
+
+--count the total number of tracks by each artist
+select distinct(ARTIST) FROM spotify_data_table;
+select COUNT(distinct(ARTIST)) FROM spotify_data_table;
+
+SELECT 
+    ARTIST,
+    COUNT(TRACK) AS TOTAL_SONGS
+FROM spotify_data_table
+GROUP BY ARTIST;
 
 
 
