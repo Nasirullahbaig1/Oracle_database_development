@@ -36,8 +36,15 @@ group by ARTIST, ALBUM
 order by ARTIST;
 
 --Get the total number of comments for tracks where licensed = TRUE
-select count(COMMENTS) from spotify_data_table
-where LICENSED = 'TURE';
+select count(COMMENTS) as Total_comments
+from spotify_data_table
+where LICENSED = 'True';
+
+select count(COMMENTS) as Total_comments
+from spotify_data_table
+where LICENSED = 'False';
+
+
 
 
 
