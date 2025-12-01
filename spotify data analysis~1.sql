@@ -80,7 +80,19 @@ select track,
     sum(likes) as total_likes
 from spotify_data_table
 where official_video = 'True'
-group by track;
+group by track
+order by 2 desc;
+
+--for each album find the total views of all the assosiated tracks.
+select album, track,
+    sum(views) as views
+from spotify_data_table
+group by album, track
+order by 3 desc;
+
+
+
+    
 
 
 
