@@ -36,8 +36,12 @@ FROM NAMES;
 
 --Below we will use the case funtion to handle the above cases.
 SELECT FULLNAME,
+
+
+
 --FOR FIRST NAME
 NVL(SUBSTR(FULLNAME, 1, INSTR(FULLNAME, ' ', 1, 1) -1), FULLNAME) AS FIRST_NAME,
+
 --FOR MIDDLE NAME
 CASE
     WHEN INSTR(FULLNAME, ' ', 1, 2) > 0
@@ -47,6 +51,7 @@ CASE
         ELSE
             NULL
 END AS MIDDLE_NAME,
+
 --FOR LAST NAME
 CASE
     WHEN INSTR(FULLNAME, ' ', 1, 1) = 0

@@ -59,6 +59,24 @@ FROM spotify_data_table
 GROUP BY ARTIST 
 ORDER BY 2;
 
+--Calculate the avarage deceability of track in each album.
+select album,
+    avg(danceability) as avg_dancebility
+from spotify_data_table
+group by album
+order by 2;
+
+--Find the top 5 tracks with the highest energy values.
+select track,
+    avg(ENERGYLIVENESS)
+from spotify_data_table
+group by track
+order by 2 desc
+fetch first 5 rows only;
+
+
+
+
 
 
 
