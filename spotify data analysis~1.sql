@@ -68,11 +68,19 @@ order by 2;
 
 --Find the top 5 tracks with the highest energy values.
 select track,
-    avg(ENERGYLIVENESS)
+    max(ENERGYLIVENESS)
 from spotify_data_table
 group by track
 order by 2 desc
 fetch first 5 rows only;
+
+--list all the tracks along with their views and likes where official_video is = TRUE.
+select track, 
+    sum(views) as total_views, 
+    sum(likes) as total_likes
+from spotify_data_table
+where official_video = 'True'
+group by track;
 
 
 
