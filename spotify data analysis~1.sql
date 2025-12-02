@@ -94,14 +94,30 @@ order by 3 desc;
 with TrackStream as
 (select  track,
         --most_playedon,
-        NVL(SUM(CASE WHEN most_playedon = 'Youtube' THEN stream END), 0) AS streamed_youtube,
-        NVL(SUM(CASE WHEN most_playedon = 'Spotify' THEN stream END), 0) AS streamed_spotify
+        NVL(SUM(CASE WHEN most_playedon = 'Youtube' THEN stream END), 0) AS streamed_spotify,
+        NVL(SUM(CASE WHEN most_playedon = 'Spotify' THEN stream END), 0) AS streamed_youtube
 from spotify_data_table
 group by track
 order by 3 desc
 )
 select * from TrackStream
 where streamed_spotify > streamed_youtube and streamed_youtube <> 0;
+
+--Find the top 3 most viewed tracks for each artist using window functions.
+with table_rank as(
+select 
+    artist,
+    track,
+    sum(views) as total_views,
+    dense_rank() over(partition by artist order by sum(views) desc) as rank
+from spotify_data_table
+group by artist, track
+order by 1, 3 desc)
+select * from table_rank
+where rank <= 3;
+
+
+
 
 
         
