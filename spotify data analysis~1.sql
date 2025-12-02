@@ -90,7 +90,21 @@ from spotify_data_table
 group by album, track
 order by 3 desc;
 
+--retrive the track names that have been streamed on spotify more then youtube.
+with TrackStream as
+(select  track,
+        --most_playedon,
+        NVL(SUM(CASE WHEN most_playedon = 'Youtube' THEN stream END), 0) AS streamed_youtube,
+        NVL(SUM(CASE WHEN most_playedon = 'Spotify' THEN stream END), 0) AS streamed_spotify
+from spotify_data_table
+group by track
+order by 3 desc
+)
+select * from TrackStream
+where streamed_spotify > streamed_youtube and streamed_youtube <> 0;
 
+
+        
 
     
 
