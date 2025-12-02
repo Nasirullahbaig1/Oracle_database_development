@@ -116,6 +116,29 @@ order by 1, 3 desc)
 select * from table_rank
 where rank <= 3;
 
+--write a query to find track where the liveness score is above the avarage.
+select track,
+        liveness
+from spotify_data_table
+where liveness > (select avg(liveness) from spotify_data_table)
+order by 2 desc;
+
+--use the WITH clause to calculate the difference between the highest and lowest enargy values
+--for track in each album.
+with difference as(
+select album,
+        max(energy) as highest_energy,
+        min(energy) as lowest_energy
+from spotify_data_table
+group by album)
+select album,
+        highest_energy,
+        lowest_energy,
+        highest_energy - lowest_energy as difference_column
+from difference
+
+--
+
 
 
 
